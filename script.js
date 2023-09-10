@@ -1,33 +1,4 @@
 'use strict';
-//Selecting an Element
-//console.log(document.querySelector('.message').textContent);
-
-//DOM
-
-/*
-Document Object Model: Structured representation of HTML Document.
-Allows JS to access HTML element and styles to Manipulte them.
-
-DOM is automaticallly created by the browser as soon as 
-the html page loads and its stored in a tree structure like this one.
-
-*/
-/*
-document.querySelector('.message').textContent = '😀 Correct Number!';
-
-document.querySelector('.number').textContent = 21;
-document.querySelector('.score').textContent = 69;
-
-document.querySelector('.guess').value = 67;
-console.log(document.querySelector('.guess').value);
-*/
-// const x = function() {
-//     console.log(27);
-// };
-// console.log(typeof x);
-
-//Math.random will always give us a new number
-//const number = Math.random();
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 //number will remain between 1 and 20. As well decimal values will be removed
