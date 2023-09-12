@@ -6,12 +6,9 @@ document.querySelector('.number').textContent = '?';
 //Creating a score variable 
 let score = 20;
 let highScore = 0;
+//When clicking on Check button
 document.querySelector('.check').addEventListener('click', function() {
     const guess = Number(document.querySelector('.guess').value);
-    //console.log(document.querySelector('.guess').value);   
-    console.log(guess, typeof guess);
-
-
     if (!guess) {
         document.querySelector('.message').textContent = 'Number Not Present!';
     } else if (guess === secretNumber) {
@@ -44,7 +41,7 @@ document.querySelector('.check').addEventListener('click', function() {
         }
     }
 });
-
+// Logic when clicking on Again button 
 document.querySelector('.again').addEventListener('click', function() {
     document.querySelector('.message').textContent = 'Start guessing...';
     document.querySelector('.score').textContent = 20;
@@ -54,6 +51,4 @@ document.querySelector('.again').addEventListener('click', function() {
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
     document.querySelector('.number'). style.width = '15rem';
-
-    // document.querySelector('.highscore').textContent = highScore;
 });
