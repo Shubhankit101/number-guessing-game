@@ -1,4 +1,3 @@
-'use strict';
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 //number will remain between 1 and 20. As well decimal values will be removed
@@ -6,17 +5,23 @@ document.querySelector('.number').textContent = '?';
 //Creating a score variable 
 let score = 20;
 let highScore = 0;
-//When clicking on Check button
 document.querySelector('.check').addEventListener('click', function() {
     const guess = Number(document.querySelector('.guess').value);
+    //console.log(document.querySelector('.guess').value);   
+    console.log(guess, typeof guess);
+
+
     if (!guess) {
         document.querySelector('.message').textContent = 'Number Not Present!';
     } else if (guess === secretNumber) {
         document.querySelector('.message').textContent = 'Congratulations you Guessed Correctly';
         document.querySelector('body').style.backgroundColor = '#60b347'
         document.querySelector('.number').textContent = secretNumber;
-
         document.querySelector('.number'). style.width = '30rem';
+        if(score > highScore){
+            highScore = score;
+            document.querySelector('.highscore').textContent = highScore;
+        }
     }
     //When guess is too high
     else if (guess > secretNumber) {
@@ -41,10 +46,11 @@ document.querySelector('.check').addEventListener('click', function() {
         }
     }
 });
-// Logic when clicking on Again button 
+
 document.querySelector('.again').addEventListener('click', function() {
+    score = 20;
     document.querySelector('.message').textContent = 'Start guessing...';
-    document.querySelector('.score').textContent = 20;
+    document.querySelector('.score').textContent = score;
     document.querySelector('body').style.backgroundColor = '#404079';
     secretNumber = Math.trunc(Math.random() * 20) + 1;
     document.querySelector('.number').textContent = secretNumber;
