@@ -1,4 +1,4 @@
-# number-guessing-game
+# Number guessing Game
 ## A Number Guessing Game made from HTML,CSS and JavaScript. 
 
 This is the main menu where a person will guess a number.Upon each incorrect guess score will decrease by 1.
