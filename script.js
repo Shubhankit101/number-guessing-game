@@ -3,6 +3,10 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 //number will remain between 1 and 20. As well decimal values will be removed
 document.querySelector('.number').textContent = '?';
+
+const displayMessage = function(message){
+    
+}
 //Creating a score variable 
 let score = 20;
 let highScore = 0;
@@ -43,7 +47,7 @@ document.querySelector('.check').addEventListener('click', function() {
         }
     }
 });
-
+//When clicking the again button. 
 document.querySelector('.again').addEventListener('click', function() {
     score = 20;
     document.querySelector('.message').textContent = 'Start guessing...';
