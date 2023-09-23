@@ -1,5 +1,6 @@
 # Number guessing Game
-## Number Guessing Game URL: https://shubhankit101.github.io/number-guessing-game/
+<a href="https://shubhankit101.github.io/number-guessing-game/">Live Preview</a>
+
 
 ## A Number Guessing Game made from HTML,CSS and JavaScript. 
 
